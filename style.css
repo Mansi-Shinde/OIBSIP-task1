@@ -1,0 +1,142 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.root{
+  --text:1.5rem;
+ 
+}
+body{
+  font-family: 'Poppins', sans-serif
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: url("./img/img-l.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position : relative;
+  z-index: 2;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0rem 1rem;
+  color: lightpink;
+  
+  
+  transform: translateY(-100%);
+  animation: movedown 850ms linear 670ms forwards ;
+}
+
+@keyframes movedown{
+  from{
+    transform: translateY(-100%);
+  }to{
+    transform: translateY(0%);
+  }
+
+}
+
+.navbar h2{
+  font-size:xx-large;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 3rem;
+  font-size: var(--text);
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: pink;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 2px solid lightgray;
+  
+}
+
+
+.hero-text{
+  
+  color: rgb(255, 183, 255);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slide 0.6s ease-in ;
+}
+
+@keyframes slide{
+  from{
+    transform: translateX(-100%);
+  }to{
+    transform: translateX(0%);
+  }
+}
+
+.hero-text::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+  top:  0;
+  opacity: 0.4;
+}
+
+.hero-text a {
+  color: white;
+  background-color: #fa983a;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem auto;
+  display: block;
+  transition: opacity 250ms linear ;
+}
+
+.hero-text a:hover {
+  opacity: 0.8;
+}
+
+.hero-text h2 {
+  font-size: calc(1rem + 4vw);
+}
+
+.hero-text p{
+  font-size: 1.5rem;
+}
+
+.footer{
+  padding: 2rem 2rem;
+  flex-direction: column;
+  margin-left: 0.8rem auto;
+}
+
+.instagram:hover {
+  opacity: 0.5;
+}
+
+.facebook:hover {
+  opacity: 0.5;
+}
+
+.twitter:hover {
+  opacity: 0.5;
+}
